@@ -455,6 +455,17 @@
       // draw it on the page
       chart.render();
 
+      const chartDiv = document.getElementById("chart");
+
+      addEventListener('resize', (event) => {
+        if ($(window).width() < 1000) {
+          chartDiv.style.display = "none";
+        } else {
+          chartDiv.style.display = "block";
+        }
+
+      });
+
     }; // End renderChart function
   </script>
 </body>
